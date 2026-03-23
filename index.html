@@ -54,6 +54,100 @@
         ]
       }
     </script>
+    <style>
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --primary: #2563eb;
+        --border: #e2e8f0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.65;
+        color: var(--text);
+        background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 30%, var(--bg) 100%);
+      }
+
+      header,
+      main,
+      footer {
+        width: min(960px, calc(100% - 2rem));
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 2.5rem 0 1.5rem;
+      }
+
+      h1,
+      h2 {
+        line-height: 1.25;
+        margin: 0 0 0.75rem;
+      }
+
+      h1 {
+        font-size: clamp(1.8rem, 3.2vw, 2.4rem);
+      }
+
+      h2 {
+        font-size: clamp(1.25rem, 2.1vw, 1.6rem);
+        color: var(--primary);
+      }
+
+      p,
+      li {
+        margin: 0;
+      }
+
+      p + p,
+      ul + p,
+      p + ul {
+        margin-top: 0.75rem;
+      }
+
+      main {
+        display: grid;
+        gap: 1rem;
+        padding-bottom: 2rem;
+      }
+
+      section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1rem 1.1rem;
+      }
+
+      ul {
+        padding-left: 1.2rem;
+      }
+
+      li + li {
+        margin-top: 0.4rem;
+      }
+
+      #root {
+        min-height: 80px;
+      }
+
+      footer {
+        padding: 0 0 2rem;
+        color: var(--muted);
+      }
+    </style>
     <title>LMS – Lessons Management System</title>
   </head>
   <body aria-busy="false">
