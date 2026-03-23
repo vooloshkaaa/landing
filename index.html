@@ -24,13 +24,13 @@
     <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
     <title>LMS – Lessons Management System</title>
   </head>
-  <body>
-    <header>
-      <h1>Система управління заняттями (LMS)</h1>
+  <body aria-busy="false">
+    <header role="banner" aria-labelledby="site-title">
+      <h1 id="site-title">Система управління заняттями (LMS)</h1>
       <p lang="en">Lessons Management System (LMS)</p>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" role="main" aria-label="Основний вміст сторінки">
       <section aria-labelledby="project-overview-title">
         <h2 id="project-overview-title">Опис проєкту</h2>
         <p>
@@ -43,9 +43,10 @@
         </p>
       </section>
 
-      <section aria-labelledby="keywords-title">
+      <section aria-labelledby="keywords-title" aria-describedby="keywords-description">
         <h2 id="keywords-title">Ключові слова</h2>
-        <ul>
+        <p id="keywords-description" hidden>Перелік ключових термінів, пов'язаних із проєктом.</p>
+        <ul aria-label="Список ключових слів">
           <li>LMS</li>
           <li>навчальний центр</li>
           <li>англійська мова</li>
@@ -95,10 +96,15 @@
         </p>
       </section>
 
-      <div id="root"></div>
+      <div
+        id="root"
+        role="region"
+        aria-label="Інтерактивний застосунок LMS"
+        aria-live="polite"
+      ></div>
     </main>
 
-    <footer>
+    <footer role="contentinfo" aria-label="Інформація про сторінку">
       <small>© LMS Project</small>
     </footer>
     <script type="module" src="/src/main.tsx"></script>
