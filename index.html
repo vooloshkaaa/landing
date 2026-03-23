@@ -58,10 +58,14 @@
       :root {
         --bg: #f8fafc;
         --surface: #ffffff;
+        --surface-hover: #f8fbff;
         --text: #0f172a;
         --muted: #475569;
         --primary: #2563eb;
+        --primary-dark: #1d4ed8;
         --border: #e2e8f0;
+        --shadow-sm: 0 6px 18px rgba(15, 23, 42, 0.06);
+        --transition-fast: 180ms ease;
       }
 
       * {
@@ -79,6 +83,7 @@
         line-height: 1.65;
         color: var(--text);
         background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 30%, var(--bg) 100%);
+        transition: background-color var(--transition-fast), color var(--transition-fast);
       }
 
       header,
@@ -105,6 +110,7 @@
       h2 {
         font-size: 1.2rem;
         color: var(--primary);
+        transition: color var(--transition-fast);
       }
 
       p,
@@ -129,6 +135,22 @@
         border: 1px solid var(--border);
         border-radius: 12px;
         padding: 0.9rem;
+        transition:
+          transform var(--transition-fast),
+          box-shadow var(--transition-fast),
+          border-color var(--transition-fast),
+          background-color var(--transition-fast);
+      }
+
+      section:hover {
+        background: var(--surface-hover);
+        border-color: #cbd5e1;
+        box-shadow: var(--shadow-sm);
+        transform: translateY(-2px);
+      }
+
+      section:hover h2 {
+        color: var(--primary-dark);
       }
 
       ul {
@@ -139,6 +161,15 @@
         margin-top: 0.4rem;
       }
 
+      li {
+        transition: color var(--transition-fast), transform var(--transition-fast);
+      }
+
+      li:hover {
+        color: var(--primary-dark);
+        transform: translateX(2px);
+      }
+
       #root {
         min-height: 80px;
       }
@@ -146,6 +177,17 @@
       footer {
         padding: 0 0 1.5rem;
         color: var(--muted);
+        transition: color var(--transition-fast);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
       }
 
       @media (min-width: 640px) {
@@ -329,6 +371,7 @@
 
       <div
         id="root"
+        class="full-width"
         role="region"
         aria-label="Інтерактивний застосунок LMS"
         aria-live="polite"
