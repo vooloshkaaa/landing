@@ -5,12 +5,339 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="LMS – Lessons Management System. Бакалаврська робота." />
     <meta name="keywords" content="LMS, lessons, management, system, навчання" />
+    <meta name="robots" content="index, follow" />
     <meta name="author" content="[Ім'я автора]" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="application-name" content="LMS – Lessons Management System" />
+    <meta name="theme-color" content="#2563eb" />
+    <link rel="canonical" href="https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uk_UA" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:site_name" content="LMS – Lessons Management System" />
+    <meta property="og:title" content="LMS – Lessons Management System" />
+    <meta property="og:description" content="Web-застосунок для керування навчальним центром англійської мови." />
+    <meta property="og:url" content="https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/" />
+    <meta property="og:image" content="https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/favicon.svg" />
+    <meta property="og:image:secure_url" content="https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/favicon.svg" />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+    <meta property="og:image:alt" content="LMS logo for lessons management system" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LMS – Lessons Management System" />
+    <meta name="twitter:description" content="SPA для керування студентами, викладачами, розкладом, відвідуваністю та платежами." />
+    <meta name="twitter:image" content="https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/favicon.svg" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/#website",
+            "url": "https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/",
+            "name": "LMS – Lessons Management System",
+            "inLanguage": ["uk-UA", "en-US"],
+            "description": "Web-застосунок для керування навчальним центром англійської мови."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "LMS – Lessons Management System",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "url": "https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/",
+            "image": "https://efb93066-3ff6-49f6-9bf2-4b93c3624170.canvases.tempo.build/favicon.svg",
+            "description": "SPA на React + TypeScript для керування студентами, викладачами, групами, розкладом, відвідуваністю, платежами та базовою аналітикою.",
+            "inLanguage": ["uk-UA", "en-US"]
+          }
+        ]
+      }
+    </script>
+    <style>
+      :root {
+        --bg: #f8fafc;
+        --surface: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --primary: #2563eb;
+        --border: #e2e8f0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.65;
+        color: var(--text);
+        background: linear-gradient(180deg, #eff6ff 0%, var(--bg) 30%, var(--bg) 100%);
+      }
+
+      header,
+      main,
+      footer {
+        width: calc(100% - 1.25rem);
+        margin: 0 auto;
+      }
+
+      header {
+        padding: 1.5rem 0 1rem;
+      }
+
+      h1,
+      h2 {
+        line-height: 1.25;
+        margin: 0 0 0.75rem;
+      }
+
+      h1 {
+        font-size: 1.55rem;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+        color: var(--primary);
+      }
+
+      p,
+      li {
+        margin: 0;
+      }
+
+      p + p,
+      ul + p,
+      p + ul {
+        margin-top: 0.75rem;
+      }
+
+      main {
+        display: grid;
+        gap: 0.85rem;
+        padding-bottom: 1.5rem;
+      }
+
+      section {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 0.9rem;
+      }
+
+      ul {
+        padding-left: 1.2rem;
+      }
+
+      li + li {
+        margin-top: 0.4rem;
+      }
+
+      #root {
+        min-height: 80px;
+      }
+
+      footer {
+        padding: 0 0 1.5rem;
+        color: var(--muted);
+      }
+
+      @media (min-width: 640px) {
+        header,
+        main,
+        footer {
+          width: min(960px, calc(100% - 2rem));
+        }
+
+        header {
+          padding: 2rem 0 1.25rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.35rem;
+        }
+
+        main {
+          gap: 1rem;
+          padding-bottom: 2rem;
+        }
+
+        section {
+          padding: 1rem 1.1rem;
+        }
+      }
+
+      @media (min-width: 900px) {
+        header,
+        main,
+        footer {
+          width: min(1080px, calc(100% - 3rem));
+        }
+
+        main {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 1.1rem;
+          align-items: start;
+        }
+
+        .full-width {
+          grid-column: 1 / -1;
+        }
+      }
+    </style>
     <title>LMS – Lessons Management System</title>
   </head>
-  <body>
-    <div id="root"></div>
+  <body aria-busy="false">
+    <header role="banner" aria-labelledby="site-title">
+      <h1 id="site-title">Система управління заняттями (LMS)</h1>
+      <p lang="en">Lessons Management System (LMS)</p>
+    </header>
+
+    <main id="main-content" role="main" aria-label="Основний вміст сторінки">
+      <section aria-labelledby="ua-title-section">
+        <h2 id="ua-title-section">Назва проєкту (українською)</h2>
+        <p>Система управління заняттями для навчального центру англійської мови</p>
+        <p>
+          Україномовний опис: web-застосунок для централізованого керування студентами,
+          викладачами, групами, розкладом, відвідуваністю, платежами та базовою аналітикою.
+        </p>
+      </section>
+
+      <section aria-labelledby="project-overview-title">
+        <h2 id="project-overview-title">Опис проєкту</h2>
+        <p>
+          Web-застосунок для керування навчальним центром англійської мови: студенти, викладачі,
+          групи, розклад, відвідуваність, платежі та базова аналітика.
+        </p>
+        <p>
+          Проєкт реалізовано як SPA на React + TypeScript із маршрутизацією та централізованим
+          станом через контексти.
+        </p>
+      </section>
+
+      <section aria-labelledby="keywords-title" aria-describedby="keywords-description">
+        <h2 id="keywords-title">Ключові слова</h2>
+        <p id="keywords-description" hidden>Перелік ключових термінів, пов'язаних із проєктом.</p>
+        <ul aria-label="Список ключових слів">
+          <li>LMS</li>
+          <li>навчальний центр</li>
+          <li>англійська мова</li>
+          <li>студенти</li>
+          <li>викладачі</li>
+          <li>групи</li>
+          <li>розклад</li>
+          <li>відвідуваність</li>
+          <li>платежі</li>
+          <li>аналітика</li>
+          <li>React</li>
+          <li>TypeScript</li>
+          <li>SPA</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="methodology-title">
+        <h2 id="methodology-title">Методологія</h2>
+        <p>
+          Проєкт побудовано за модульним підходом SPA з розділенням відповідальності між
+          інтерфейсом, маршрутизацією та шаром керування станом.
+        </p>
+        <p>
+          Розробка виконується ітеративно: аналіз вимог, моделювання предметної області,
+          реалізація основних модулів, інтеграційне тестування та подальше вдосконалення.
+        </p>
+        <p>
+          Ключові сутності (студенти, викладачі, групи, розклад, відвідуваність і платежі)
+          реалізовані через повторно використовувані React-компоненти та централізований стан
+          на базі контекстів.
+        </p>
+      </section>
+
+      <section aria-labelledby="relevance-title">
+        <h2 id="relevance-title">Актуальність</h2>
+        <p>
+          Цифровізація освітніх процесів є критично важливою для сучасних навчальних центрів,
+          оскільки забезпечує швидкий доступ до даних і підвищує якість адміністрування.
+        </p>
+        <p>
+          Запропонований LMS-підхід зменшує кількість ручних операцій, мінімізує помилки в
+          розкладі та обліку відвідуваності, а також спрощує фінансовий контроль.
+        </p>
+        <p>
+          Актуальність проєкту зумовлена потребою в єдиній системі, яка об'єднує академічні,
+          організаційні та фінансові аспекти роботи навчального центру.
+        </p>
+      </section>
+
+      <section aria-labelledby="research-goal-title">
+        <h2 id="research-goal-title">Мета дослідження</h2>
+        <p>
+          Метою дослідження є проєктування та реалізація web-застосунку для автоматизації
+          управлінських процесів навчального центру англійської мови.
+        </p>
+        <p>
+          Основний акцент зроблено на підвищенні ефективності обліку студентів, викладачів, груп,
+          розкладу занять, відвідуваності та платежів у межах єдиного цифрового середовища.
+        </p>
+        <p>
+          Додатковою метою є створення базового аналітичного інструментарію для підтримки
+          своєчасного прийняття управлінських рішень.
+        </p>
+      </section>
+
+      <section aria-labelledby="objectives-title">
+        <h2 id="objectives-title">Завдання дослідження</h2>
+        <ul aria-label="Перелік завдань дослідження">
+          <li>Проаналізувати предметну область та ключові бізнес-процеси навчального центру.</li>
+          <li>Сформувати функціональні та нефункціональні вимоги до LMS-застосунку.</li>
+          <li>Спроєктувати структуру даних для студентів, викладачів, груп, занять і платежів.</li>
+          <li>Реалізувати SPA на React + TypeScript з маршрутизацією та керуванням станом.</li>
+          <li>Забезпечити модулі розкладу, відвідуваності, платежів та базової аналітики.</li>
+          <li>Провести тестування й оцінити ефективність запропонованого рішення.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="results-title">
+        <h2 id="results-title">Очікувані результати</h2>
+        <p>
+          У результаті реалізації проєкту очікується створення зручного та надійного
+          web-застосунку для адміністрування навчального центру англійської мови.
+        </p>
+        <p>
+          Система має забезпечити ефективне керування студентами, викладачами, групами,
+          розкладом занять, відвідуваністю та обліком платежів в єдиному інтерфейсі.
+        </p>
+        <p>
+          Додатково передбачено отримання базової аналітики для підтримки управлінських рішень,
+          зменшення рутинних операцій і підвищення прозорості навчального процесу.
+        </p>
+        <ul aria-label="Очікувані результати українською">
+          <li>Підвищення швидкості та якості операційного керування навчальним центром.</li>
+          <li>Зменшення кількості помилок у розкладі, відвідуваності та фінансовому обліку.</li>
+          <li>Прозорий контроль ключових показників завдяки базовій аналітиці.</li>
+        </ul>
+      </section>
+
+      <div
+        id="root"
+        role="region"
+        aria-label="Інтерактивний застосунок LMS"
+        aria-live="polite"
+      ></div>
+    </main>
+
+    <footer role="contentinfo" aria-label="Інформація про сторінку">
+      <small>© LMS Project</small>
+    </footer>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
