@@ -29,7 +29,8 @@ function FormExample() {
   });
 
   function onSubmit(values: { username: string }) {
-    console.log(values);
+    // Handle form submission
+    console.debug('Form submitted:', values);
   }
 
   return (
@@ -70,7 +71,8 @@ function FormWithValidation() {
   });
 
   function onSubmit(values: { email: string }) {
-    console.log(values);
+    // Handle form submission
+    console.debug('Form submitted:', values);
   }
 
   return (
