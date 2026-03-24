@@ -19,7 +19,7 @@ const meta = {
 export default meta;
 
 export const Base = {
-  render: (args: any) => (
+  render: (args: React.ComponentProps<typeof Drawer>) => (
     <Drawer {...args}>
       <DrawerTrigger>Open</DrawerTrigger>
       <DrawerContent>

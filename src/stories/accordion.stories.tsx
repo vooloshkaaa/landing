@@ -16,7 +16,7 @@ const meta = {
 export default meta;
 
 export const Base = {
-  render: (args: any) => (
+  render: (args: React.ComponentProps<typeof Accordion>) => (
     <Accordion {...args}>
       <AccordionItem value="item-1">
         <AccordionTrigger>Is it accessible?</AccordionTrigger>
