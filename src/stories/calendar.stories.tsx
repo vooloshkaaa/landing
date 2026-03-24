@@ -30,7 +30,7 @@ const meta = {
 export default meta;
 
 export const Base = {
-  render: (args: any) => <Calendar {...args}>Calendar</Calendar>,
+  render: (args: React.ComponentProps<typeof Calendar>) => <Calendar {...args}>Calendar</Calendar>,
   args: {
     mode: "single",
     className: "rounded-md border",
@@ -62,7 +62,7 @@ export const DatePicker = {
 };
 
 export const DatePickerRange = {
-  render: () => {
+  render: function DatePickerRangeStory() {
     const [date, setDate] = useState<DateRange | undefined>({
       from: new Date(2023, 0, 20),
       to: addDays(new Date(2023, 0, 20), 20),
@@ -110,7 +110,7 @@ export const DatePickerRange = {
 };
 
 export const DatePickerWithPresets = {
-  render: () => {
+  render: function DatePickerWithPresetsStory() {
     const [date, setDate] = useState<Date | undefined>(new Date(2023, 0, 20));
 
     return (

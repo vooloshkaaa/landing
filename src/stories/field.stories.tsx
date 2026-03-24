@@ -35,7 +35,7 @@ export const WithDescription = {
     <Field>
       <FieldLabel>Email</FieldLabel>
       <Input type="email" placeholder="Enter your email" />
-      <FieldDescription>We'll never share your email.</FieldDescription>
+      <FieldDescription>We&apos;ll never share your email.</FieldDescription>
     </Field>
   ),
   args: {},
