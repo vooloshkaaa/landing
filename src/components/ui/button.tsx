@@ -34,6 +34,41 @@ const buttonVariants = cva(
   }
 )
 
+/**
+ * Button component with multiple variants and sizes
+ * 
+ * @description A versatile button component that supports different visual styles,
+ * sizes, and can be rendered as a different element using the asChild prop.
+ * Built with Radix UI Slot for composition and class-variance-authority for variants.
+ * 
+ * @param {string} [variant="default"] - Visual style: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
+ * @param {string} [size="default"] - Button size: "default" | "sm" | "lg" | "icon"
+ * @param {boolean} [asChild=false] - Whether to render as child element using Radix Slot
+ * @param {string} [className] - Additional CSS classes to apply
+ * @param {React.ButtonHTMLAttributes<HTMLButtonElement>} props - Standard button attributes
+ * @param {React.Ref<HTMLButtonElement>} ref - Forward ref for DOM access
+ * 
+ * @returns {JSX.Element} - Styled button component
+ * 
+ * @example
+ * ```tsx
+ * // Basic usage
+ * <Button>Click me</Button>
+ * 
+ * // With variant and size
+ * <Button variant="outline" size="lg">Large Outline Button</Button>
+ * 
+ * // As child (for links)
+ * <Button asChild>
+ *   <Link href="/about">About</Link>
+ * </Button>
+ * 
+ * // Icon button
+ * <Button size="icon">
+ *   <PlusIcon />
+ * </Button>
+ * ```
+ */
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
