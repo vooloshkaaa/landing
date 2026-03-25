@@ -9,7 +9,10 @@
     "build-no-errors": "tsc ; vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "types:supabase": "npx supabase gen types typescript --project-id $SUPABASE_PROJECT_ID > src/types/supabase.ts"
+    "types:supabase": "npx supabase gen types typescript --project-id $SUPABASE_PROJECT_ID > src/types/supabase.ts",
+    "docs:generate": "node scripts/generate-docs.js",
+    "docs:generate:raw": "npx jsdoc -c jsdoc.json",
+    "docs:serve": "npx http-server docs/ -p 8080"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
@@ -71,9 +74,12 @@
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react-swc": "^4.1.0",
     "autoprefixer": "^10.4.19",
+    "eslint-plugin-jsdoc": "^62.8.0",
+    "jsdoc": "^4.0.5",
     "postcss": "^8.4.38",
     "tailwindcss": "3.4.1",
     "typescript": "^5.8.2",
-    "vite": "^7.1.12"
+    "vite": "^7.1.12",
+    "vitest": "^4.1.1"
   }
 }

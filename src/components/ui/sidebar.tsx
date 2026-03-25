@@ -42,6 +42,36 @@ type SidebarContextProps = {
 
 const SidebarContext = React.createContext<SidebarContextProps | null>(null)
 
+/**
+ * Custom hook to access sidebar context
+ * 
+ * @description Provides access to the sidebar state and controls. Must be used within
+ * a SidebarProvider component. Throws an error if used outside of a SidebarProvider.
+ * 
+ * @returns {SidebarContextProps} - Object containing sidebar state and control functions
+ * @returns {string} returns.state - Current sidebar state: "expanded" | "collapsed"
+ * @returns {boolean} returns.open - Whether sidebar is open
+ * @returns {function} returns.setOpen - Function to set sidebar open state
+ * @returns {boolean} returns.openMobile - Whether mobile sidebar is open
+ * @returns {function} returns.setOpenMobile - Function to set mobile sidebar state
+ * @returns {boolean} returns.isMobile - Whether current viewport is mobile
+ * @returns {function} returns.toggleSidebar - Function to toggle sidebar state
+ * 
+ * @throws {Error} - When used outside of SidebarProvider
+ * 
+ * @example
+ * ```tsx
+ * function MyComponent() {
+ *   const { state, open, toggleSidebar } = useSidebar();
+ *   
+ *   return (
+ *     <button onClick={toggleSidebar}>
+ *       {state === 'expanded' ? 'Collapse' : 'Expand'}
+ *     </button>
+ *   );
+ * }
+ * ```
+ */
 function useSidebar() {
   const context = React.useContext(SidebarContext)
   if (!context) {

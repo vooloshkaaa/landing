@@ -1,0 +1,30 @@
+# Files and directories to exclude from JSDoc generation
+
+# Test files
+**/*.test.ts
+**/*.test.tsx
+**/*.spec.ts
+**/*.spec.tsx
+
+# Story files
+**/*.stories.tsx
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Documentation output
+docs/
+
+# Configuration files
+*.config.js
+*.config.ts
+*.json
+!jsdoc.json
+
+# Temporary files
+*.tmp
+*.temp

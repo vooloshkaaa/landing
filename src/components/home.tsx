@@ -4,6 +4,23 @@ import AboutSection from "@/components/AboutSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import SiteFooter from "@/components/SiteFooter";
 
+/**
+ * Main landing page component
+ * 
+ * @description Complete home page layout that combines all major sections:
+ * header, hero, about, features, and footer. Provides consistent
+ * styling with custom background and text colors for the landing page.
+ * 
+ * @returns {JSX.Element} - Complete home page layout
+ * 
+ * @example
+ * ```tsx
+ * // Usage in App.tsx routing
+ * import Home from './components/home';
+ * 
+ * <Route path="/" element={<Home />} />
+ * ```
+ */
 function Home() {
   return (
     <div
